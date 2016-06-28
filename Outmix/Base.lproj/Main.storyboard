@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KMC-Ix-Dgr">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Outmix-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Outmix" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,189 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX6-S9-iAB">
+                                <rect key="frame" x="200" y="114" width="200" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="EiC-Pq-6ux"/>
+                                    <constraint firstAttribute="height" constant="150" id="UdD-h1-8ii"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" image="ChooseOutfitButton-1"/>
+                                <connections>
+                                    <action selector="getOutfit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WJr-dw-Vhk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUC-cV-6u9">
+                                <rect key="frame" x="200" y="314" width="200" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="lh5-hx-2t6"/>
+                                    <constraint firstAttribute="height" constant="150" id="s6V-aO-i99"/>
+                                </constraints>
+                                <state key="normal" image="OutfitLibraryButton-1"/>
+                                <connections>
+                                    <segue destination="EGF-IQ-Dmt" kind="show" identifier="homeToLibrary" id="cke-Gj-vPg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eX6-S9-iAB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SaK-jC-zQd"/>
+                            <constraint firstItem="oUC-cV-6u9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qQB-6y-CMr"/>
+                            <constraint firstItem="eX6-S9-iAB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="sdf-bg-txV"/>
+                            <constraint firstItem="oUC-cV-6u9" firstAttribute="top" secondItem="eX6-S9-iAB" secondAttribute="bottom" constant="50" id="wM6-bo-90V"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Outmix" id="tEA-ja-5zH"/>
+                    <connections>
+                        <segue destination="EGF-IQ-Dmt" kind="show" identifier="photoToLibrary" id="f6e-fC-y7e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1034" y="-339"/>
+        </scene>
+        <!--Library View Controller-->
+        <scene sceneID="dQN-lT-qR6">
+            <objects>
+                <viewController id="EGF-IQ-Dmt" customClass="LibraryViewController" customModule="Outmix" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DKl-dT-MvN"/>
+                        <viewControllerLayoutGuide type="bottom" id="RTv-gK-WAQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TT1-no-OQI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xZR-Pp-5qX">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fXm-w0-OnK">
+                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="esO-Y2-2tx" customClass="CollectionViewCell" customModule="Outmix" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="74" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t3C-39-Fma">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="t3C-39-Fma" secondAttribute="bottom" id="atU-hJ-tH5"/>
+                                            <constraint firstItem="t3C-39-Fma" firstAttribute="leading" secondItem="esO-Y2-2tx" secondAttribute="leading" id="sNe-Hb-SBN"/>
+                                            <constraint firstItem="t3C-39-Fma" firstAttribute="top" secondItem="esO-Y2-2tx" secondAttribute="top" id="vJ9-2X-67z"/>
+                                            <constraint firstAttribute="trailing" secondItem="t3C-39-Fma" secondAttribute="trailing" id="xuN-jD-7Wj"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="t3C-39-Fma" id="JSc-JE-X3j"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="EGF-IQ-Dmt" id="R2G-nu-PaZ"/>
+                                    <outlet property="delegate" destination="EGF-IQ-Dmt" id="uPJ-AL-JbM"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="xZR-Pp-5qX" secondAttribute="bottom" id="8sl-vh-4No"/>
+                            <constraint firstItem="xZR-Pp-5qX" firstAttribute="top" secondItem="TT1-no-OQI" secondAttribute="top" id="BLP-Qw-uzT"/>
+                            <constraint firstAttribute="trailing" secondItem="xZR-Pp-5qX" secondAttribute="trailing" id="GAO-2D-oil"/>
+                            <constraint firstItem="xZR-Pp-5qX" firstAttribute="leading" secondItem="TT1-no-OQI" secondAttribute="leading" id="tPq-8g-Vpz"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="xZR-Pp-5qX" id="T8M-qT-goP"/>
+                        <segue destination="JYT-Hz-jrW" kind="show" identifier="showImage" id="CfN-x3-64s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c3t-fn-sHi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1725" y="-339"/>
+        </scene>
+        <!--Outfit View Controller-->
+        <scene sceneID="C4p-qx-LSe">
+            <objects>
+                <viewController id="JYT-Hz-jrW" customClass="OutfitViewController" customModule="Outmix" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oYD-0G-jkl"/>
+                        <viewControllerLayoutGuide type="bottom" id="hPH-L5-9BK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vG0-1V-c4R">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tUv-f6-H1g">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tUv-f6-H1g" secondAttribute="trailing" id="1oj-v6-k0a"/>
+                            <constraint firstItem="tUv-f6-H1g" firstAttribute="leading" secondItem="vG0-1V-c4R" secondAttribute="leading" id="5yh-12-cTE"/>
+                            <constraint firstAttribute="bottom" secondItem="tUv-f6-H1g" secondAttribute="bottom" id="Sjj-Ks-c1S"/>
+                            <constraint firstItem="tUv-f6-H1g" firstAttribute="top" secondItem="oYD-0G-jkl" secondAttribute="bottom" id="qu4-Gw-O5d"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="biS-36-NxB">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="bKL-ar-MmO">
+                            <connections>
+                                <segue destination="Xcl-AB-f8S" kind="unwind" unwindAction="unwindToLibrary:" id="NK4-XY-WFC"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Delete" id="7U5-Yy-Slb">
+                            <connections>
+                                <action selector="deleteOutfit:" destination="JYT-Hz-jrW" id="0zL-b3-8JU"/>
+                                <segue destination="Xcl-AB-f8S" kind="unwind" identifier="unwindToLibrary" unwindAction="unwindToLibrary:" id="85I-0q-ObW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="tUv-f6-H1g" id="jGW-aA-xrq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X3o-Dx-ZdI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Xcl-AB-f8S" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2428" y="-339"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tlz-EA-QFg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KMC-Ix-Dgr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xx2-wy-eRs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CBY-j1-2aA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gp3-F3-DqB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="284" y="-339"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ChooseOutfitButton-1" width="420" height="320"/>
+        <image name="OutfitLibraryButton-1" width="420" height="320"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="f6e-fC-y7e"/>
+    </inferredMetricsTieBreakers>
 </document>

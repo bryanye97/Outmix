@@ -7,21 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A263A9271D22148200AB1AF7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A263A9261D22148200AB1AF7 /* Default-568h@2x.png */; };
 		A2C0F9C61D2033DF00B12CFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C0F9C51D2033DF00B12CFB /* AppDelegate.swift */; };
-		A2C0F9C81D2033DF00B12CFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C0F9C71D2033DF00B12CFB /* ViewController.swift */; };
+		A2C0F9C81D2033DF00B12CFB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C0F9C71D2033DF00B12CFB /* HomeViewController.swift */; };
 		A2C0F9CB1D2033DF00B12CFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2C0F9C91D2033DF00B12CFB /* Main.storyboard */; };
 		A2C0F9CD1D2033DF00B12CFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2C0F9CC1D2033DF00B12CFB /* Assets.xcassets */; };
 		A2C0F9D01D2033DF00B12CFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2C0F9CE1D2033DF00B12CFB /* LaunchScreen.storyboard */; };
+		A2E029C61D207A68000665B6 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E029C51D207A68000665B6 /* CollectionViewCell.swift */; };
+		A2E029C81D207AE8000665B6 /* OutfitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E029C71D207AE8000665B6 /* OutfitViewController.swift */; };
+		A2E029CB1D2090CB000665B6 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E029C91D2090CB000665B6 /* Realm.framework */; };
+		A2E029CC1D2090CB000665B6 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2E029C91D2090CB000665B6 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A2E029CD1D2090CB000665B6 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E029CA1D2090CB000665B6 /* RealmSwift.framework */; };
+		A2E029CE1D2090CB000665B6 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2E029CA1D2090CB000665B6 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A2E029D31D20941B000665B6 /* Outfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E029D21D20941B000665B6 /* Outfit.swift */; };
+		A2E029D51D209467000665B6 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E029D41D209467000665B6 /* RealmHelper.swift */; };
+		A2F684E51D20382700C72615 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F684E41D20382700C72615 /* LibraryViewController.swift */; };
+		A2F684E71D203AAC00C72615 /* PhotoTakingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F684E61D203AAC00C72615 /* PhotoTakingHelper.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A2E029CF1D2090CB000665B6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A2E029CE1D2090CB000665B6 /* RealmSwift.framework in Embed Frameworks */,
+				A2E029CC1D2090CB000665B6 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		A263A9261D22148200AB1AF7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		A2C0F9C21D2033DF00B12CFB /* Outmix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Outmix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C0F9C51D2033DF00B12CFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A2C0F9C71D2033DF00B12CFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A2C0F9C71D2033DF00B12CFB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A2C0F9CA1D2033DF00B12CFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A2C0F9CC1D2033DF00B12CFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2C0F9CF1D2033DF00B12CFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2C0F9D11D2033DF00B12CFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2E029C51D207A68000665B6 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		A2E029C71D207AE8000665B6 /* OutfitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutfitViewController.swift; sourceTree = "<group>"; };
+		A2E029C91D2090CB000665B6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		A2E029CA1D2090CB000665B6 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		A2E029D21D20941B000665B6 /* Outfit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Outfit.swift; sourceTree = "<group>"; };
+		A2E029D41D209467000665B6 /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
+		A2F684E41D20382700C72615 /* LibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		A2F684E61D203AAC00C72615 /* PhotoTakingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTakingHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2E029CD1D2090CB000665B6 /* RealmSwift.framework in Frameworks */,
+				A2E029CB1D2090CB000665B6 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +75,8 @@
 		A2C0F9B91D2033DF00B12CFB = {
 			isa = PBXGroup;
 			children = (
+				A2E029C91D2090CB000665B6 /* Realm.framework */,
+				A2E029CA1D2090CB000665B6 /* RealmSwift.framework */,
 				A2C0F9C41D2033DF00B12CFB /* Outmix */,
 				A2C0F9C31D2033DF00B12CFB /* Products */,
 			);
@@ -55,13 +94,36 @@
 			isa = PBXGroup;
 			children = (
 				A2C0F9C51D2033DF00B12CFB /* AppDelegate.swift */,
-				A2C0F9C71D2033DF00B12CFB /* ViewController.swift */,
+				A2E029C51D207A68000665B6 /* CollectionViewCell.swift */,
+				A2F684EB1D203E6B00C72615 /* ViewControllers */,
+				A2F684EA1D203E6400C72615 /* Models */,
 				A2C0F9C91D2033DF00B12CFB /* Main.storyboard */,
 				A2C0F9CC1D2033DF00B12CFB /* Assets.xcassets */,
+				A263A9261D22148200AB1AF7 /* Default-568h@2x.png */,
 				A2C0F9CE1D2033DF00B12CFB /* LaunchScreen.storyboard */,
 				A2C0F9D11D2033DF00B12CFB /* Info.plist */,
 			);
 			path = Outmix;
+			sourceTree = "<group>";
+		};
+		A2F684EA1D203E6400C72615 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A2F684E61D203AAC00C72615 /* PhotoTakingHelper.swift */,
+				A2E029D21D20941B000665B6 /* Outfit.swift */,
+				A2E029D41D209467000665B6 /* RealmHelper.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A2F684EB1D203E6B00C72615 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A2C0F9C71D2033DF00B12CFB /* HomeViewController.swift */,
+				A2F684E41D20382700C72615 /* LibraryViewController.swift */,
+				A2E029C71D207AE8000665B6 /* OutfitViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +136,8 @@
 				A2C0F9BE1D2033DF00B12CFB /* Sources */,
 				A2C0F9BF1D2033DF00B12CFB /* Frameworks */,
 				A2C0F9C01D2033DF00B12CFB /* Resources */,
+				A2E029CF1D2090CB000665B6 /* Embed Frameworks */,
+				A263A9281D2217EF00AB1AF7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -96,7 +160,7 @@
 				TargetAttributes = {
 					A2C0F9C11D2033DF00B12CFB = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = AGKE49ZWKM;
+						DevelopmentTeam = WZ4NEVB3RP;
 					};
 				};
 			};
@@ -124,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2C0F9D01D2033DF00B12CFB /* LaunchScreen.storyboard in Resources */,
+				A263A9271D22148200AB1AF7 /* Default-568h@2x.png in Resources */,
 				A2C0F9CD1D2033DF00B12CFB /* Assets.xcassets in Resources */,
 				A2C0F9CB1D2033DF00B12CFB /* Main.storyboard in Resources */,
 			);
@@ -131,13 +196,35 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A263A9281D2217EF00AB1AF7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\n# This script loops through the frameworks embedded in the application and\n# removes unused architectures.\nfind \"$APP_PATH\" -name '*.framework' -type d | while read -r FRAMEWORK\ndo\nFRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\nFRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\necho \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\n\nEXTRACTED_ARCHS=()\n\nfor ARCH in $ARCHS\ndo\necho \"Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME\"\nlipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\nEXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\ndone\n\necho \"Merging extracted architectures: ${ARCHS}\"\nlipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\nrm \"${EXTRACTED_ARCHS[@]}\"\n\necho \"Replacing original executable with thinned version\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\n\ndone";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A2C0F9BE1D2033DF00B12CFB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2C0F9C81D2033DF00B12CFB /* ViewController.swift in Sources */,
+				A2C0F9C81D2033DF00B12CFB /* HomeViewController.swift in Sources */,
+				A2F684E51D20382700C72615 /* LibraryViewController.swift in Sources */,
+				A2E029C61D207A68000665B6 /* CollectionViewCell.swift in Sources */,
+				A2F684E71D203AAC00C72615 /* PhotoTakingHelper.swift in Sources */,
+				A2E029C81D207AE8000665B6 /* OutfitViewController.swift in Sources */,
+				A2E029D51D209467000665B6 /* RealmHelper.swift in Sources */,
 				A2C0F9C61D2033DF00B12CFB /* AppDelegate.swift in Sources */,
+				A2E029D31D20941B000665B6 /* Outfit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +337,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					RealmSwift.framework,
+				);
 				INFOPLIST_FILE = Outmix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bryanye.Outmix;
@@ -261,6 +354,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					RealmSwift.framework,
+				);
 				INFOPLIST_FILE = Outmix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bryanye.Outmix;
@@ -287,6 +386,7 @@
 				A2C0F9D61D2033DF00B12CFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
